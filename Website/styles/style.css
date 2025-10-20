@@ -1,7 +1,11 @@
 html {
   font-size: 10px;
   font-family: "Pixelify Sans", sans-serif;
-}
-.done {
-  
+  body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 0 20px 20px 20px;
+    border: 0px solid black;
+  }
 }
