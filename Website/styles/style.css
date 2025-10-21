@@ -8,4 +8,8 @@ html {
     padding: 0 20px 20px 20px;
     border: 0px solid black;
   }
+  .done {
+  color: darkseagreen;
+  text-decoration: line-through solid black 2px;
+}
 }
