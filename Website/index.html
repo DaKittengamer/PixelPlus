@@ -1,15 +1,95 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PixelPlus — Creative pixel-perfect sites</title>
+    <meta name="description" content="PixelPlus — a small responsive demo site with hero, features and contact form." />
     <link href="styles/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <script async src="scripts/main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/main.js"></script>
   </head>
   <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#home">PixelPlus</a>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <h1 class="hero-title">Beautiful, fast, and accessible websites</h1>
+          <p class="hero-sub">PixelPlus is a small static demo showing a responsive layout, accessible navigation, and a lightweight contact form.</p>
+          <p>
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn ghost" href="#features">See features</a>
+          </p>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="section-title">Features</h2>
+          <div class="feature-grid">
+            <article class="feature">
+              <div class="feature-icon">⚡</div>
+              <h3>Fast</h3>
+              <p>Minimal, performant markup and styles so pages load quickly.</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">🎨</div>
+              <h3>Pixel-perfect</h3>
+              <p>Careful spacing and typography for a polished look on all screens.</p>
+            </article>
+            <article class="feature">
+              <div class="feature-icon">🔒</div>
+              <h3>Accessible</h3>
+              <p>Keyboard-friendly navigation and clear form labels for screen readers.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Contact</h2>
+          <p>Send a quick message — this demo validates input and shows a success message locally.</p>
+          <form id="contact-form" class="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Send message</button>
+              <button type="reset" class="btn ghost">Reset</button>
+            </div>
+            <div id="form-status" class="form-status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> PixelPlus — Demo site</p>
+        <p><a href="#home">Back to top</a></p>
+      </div>
+    </footer>
   </body>
 </html>
